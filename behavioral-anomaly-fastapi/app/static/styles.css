@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin: 6px 0 24px;
+}
+
+.input-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+
+textarea {
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 13px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4a90d9;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#analyzeBtn {
+  background: #4a90d9;
+  color: #fff;
+}
+
+button.secondary {
+  background: #e8edf2;
+  color: #333;
+}
+
+button.danger {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 10px;
+  display: none;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+.loading {
+  text-align: center;
+  padding: 24px;
+  font-size: 15px;
+  color: #4a90d9;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.card-box {
+  flex: 1;
+  min-width: 160px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card-box.high-risk {
+  border: 2px solid #e74c3c;
+}
+
+.card-num {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.high-risk .card-num {
+  color: #e74c3c;
+}
+
+.card-label {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1a1a2e;
+}
+
+.alert-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border-left: 5px solid #ccc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.alert-card.severity-HIGH {
+  border-left-color: #e74c3c;
+  background: #fff5f5;
+}
+
+.alert-card.severity-MEDIUM {
+  border-left-color: #f39c12;
+  background: #fffdf5;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.student-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.badge-HIGH {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.badge-MEDIUM {
+  background: #f39c12;
+  color: #fff;
+}
+
+.badge-pattern {
+  font-size: 10px;
+  background: #eaf0fb;
+  color: #2c5282;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.alert-desc {
+  font-size: 13px;
+  color: #555;
+  margin: 6px 0;
+}
+
+.alert-meta {
+  font-size: 11px;
+  color: #999;
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}

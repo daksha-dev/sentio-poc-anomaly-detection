@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Behavioral Anomaly Detection Dashboard</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Behavioral Anomaly Detection Dashboard</h1>
+  <p class="subtitle">Upload behavioral event logs to detect distress/anomaly patterns</p>
+
+  <div class="input-section">
+    <textarea id="eventInput" rows="12" placeholder='Paste JSON array of events here...'></textarea>
+    <div class="button-row">
+      <button id="analyzeBtn">Analyze</button>
+      <button id="sampleBtn" class="secondary">Load Sample Data</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </div>
+    <p id="errorMsg" class="error-msg"></p>
+  </div>
+
+  <div id="loading" class="loading hidden">Processing events...</div>
+
+  <div class="summary-cards hidden" id="summaryCards">
+    <div class="card-box">
+      <div class="card-num" id="eventsProcessed">0</div>
+      <div class="card-label">Events Processed</div>
+    </div>
+    <div class="card-box">
+      <div class="card-num" id="alertsGenerated">0</div>
+      <div class="card-label">Alerts Generated</div>
+    </div>
+    <div class="card-box high-risk">
+      <div class="card-num" id="highRiskCount">0</div>
+      <div class="card-label">High Risk Cases</div>
+    </div>
+  </div>
+
+  <div id="alertsContainer" class="hidden">
+    <h2>Alerts</h2>
+    <div id="alertCards"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
